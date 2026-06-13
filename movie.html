@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List Tracker</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #divMovies{
+            margin-top: 20px;
+            border: 1px solid black;
+            padding: 10px;
+            min-height: 100px;
+        }
+
+        button{
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Movie List Tracker</h1>
+    </header>
+
+    <main>
+        <div>
+            <label for="txtMovie">Movie Name:</label>
+            <input type="text" id="txtMovie" name="txtMovie">
+        </div>
+
+        <br>
+
+        <button onclick="addMovie()">Add Movie</button>
+        <button onclick="showMovies()">Display List</button>
+        <button onclick="resetMovieList()">Reset List</button>
+
+        <div id="divMovies">
+            Movie list will appear here.
+        </div>
+    </main>
+
+    <script>
+
+        // Array used to store movie titles
+        let arrMovies = [];
+
+        // Adds a movie title to the array
+        function addMovie()
+        {
+            let txtMovie = document.getElementById("txtMovie");
+            let movieName = txtMovie.value.trim();
+
+            if(movieName != "")
+            {
+                arrMovies.push(movieName);
+                txtMovie.value = "";
+            }
+        }
+
+        // Sorts and displays the movie list
+        function showMovies()
+        {
+            let divMovies = document.getElementById("divMovies");
+
+            arrMovies.sort();
+
+            divMovies.innerHTML = arrMovies.join("<br>");
+        }
+
+        // Clears the movie list and display area
+        function resetMovieList()
+        {
+            arrMovies = [];
+
+            document.getElementById("divMovies").innerHTML =
+            "Movie list will appear here.";
+        }
+
+    </script>
+</body>
+</html>
+
