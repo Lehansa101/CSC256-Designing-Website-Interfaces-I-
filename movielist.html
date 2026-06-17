@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List Tracker</title>
+
+    <link rel="stylesheet" href="movielist.css">
+</head>
+
+<body>
+    <header>
+        <h1>Movie List Tracker</h1>
+    </header>
+
+    <main>
+        <div>
+            <label for="txtMovie">Movie Name:</label>
+            <input type="text" id="txtMovie" name="txtMovie">
+        </div>
+
+        <br>
+
+        <button onclick="addMovie()">Add Movie</button>
+        <button onclick="showMovies()">Display List</button>
+        <button onclick="resetMovieList()">Reset List</button>
+
+        <div id="divMovies">
+            Movie list will appear here.
+        </div>
+    </main>
+
+    <script src="movielist.js"></script>
+</body>
+</html>
