@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Crossword Puzzle</title>
+
+    <link rel="stylesheet" href="crossword.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Space Crossword Puzzle</h1>
+</header>
+
+<main>
+
+    <h2>Clues</h2>
+
+    <div id="clueBox"></div>
+
+    <h2>Your Answers</h2>
+
+    <div>
+        <label>Word 1:</label>
+        <input type="text" id="word1">
+    </div>
+
+    <div>
+        <label>Word 2:</label>
+        <input type="text" id="word2">
+    </div>
+
+    <div>
+        <label>Word 3:</label>
+        <input type="text" id="word3">
+    </div>
+
+    <br>
+
+    <button onclick="checkAnswers()">Check Answers</button>
+
+    <h3 id="result"></h3>
+
+</main>
+
+<script src="crossword.js"></script>
+
+</body>
+</html>
